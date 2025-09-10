@@ -372,6 +372,45 @@
             color: #e67e22;
         }
         
+        .screenshot {
+            margin-top: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.2);
+            font-style: italic;
+            font-size: 14px;
+        }
+        
+        .screenshot-content {
+            margin-top: 8px;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+        }
+        
+        .message {
+            margin-bottom: 8px;
+            padding: 8px;
+            border-radius: 5px;
+        }
+        
+        .message.incoming {
+            background: rgba(255, 255, 255, 0.1);
+            text-align: left;
+        }
+        
+        .message.outgoing {
+            background: rgba(231, 76, 60, 0.2);
+            text-align: right;
+        }
+        
+        .message-time {
+            font-size: 12px;
+            color: #aaa;
+            margin-top: 5px;
+        }
+        
         footer {
             text-align: center;
             padding: 40px 0;
@@ -441,7 +480,7 @@
                 <ul>
                     <li><a href="#">Главная</a></li>
                     <li><a href="#">Услуги</a></li>
-                    <li><a href="#">Отзывы</a></li>
+                    <li><a href="#reviews">Отзывы</a></li>
                     <li><a href="#">Контакты</a></li>
                 </ul>
             </nav>
@@ -465,8 +504,8 @@
         
         <section class="about">
             <div class="about-content">
-                <p>Я специализируюсь на преподавании программирования для учеников школ, лицеев для повышения успеваемости или для сдачи экзаменов. Моя цель — не просто научить syntax языка, а помочь понять логику программирования и развить алгоритмическое мышление.</p>
-                <p>Имею опыт работы с разными возрастными группами и индивидуальный подход к каждому ученику. Мои ребята успешно сдают экзамены и поступают в технические вузы.</p>
+                <p>Я специализируюсь на преподавании программирования для начинающих и продолжающих студентов. Моя цель — не просто научить syntax языка, а помочь понять логику программирования и развить алгоритмическое мышление.</p>
+                <p>Имею опыт работы с разными возрастными группами и индивидуальный подход к каждому ученику. Мои студенты успешно сдают экзамены и поступают в технические вузы.</p>
                 <p>Владею языками программирования: <span class="highlight">C++</span>, <span class="highlight">Python</span>, <span class="highlight">C#</span>, а также основами веб-разработки.</p>
             </div>
             <div class="about-stats">
@@ -504,7 +543,7 @@
             <div class="service">
                 <i class="fas fa-code"></i>
                 <h3>Подготовка к экзаменам</h3>
-                <p>Интенсивная подготовка к ОГЭ</p>
+                <p>Интенсивная подготовка к ЕГЭ, ОГЭ и вступительным экзаменам</p>
             </div>
             <div class="service">
                 <i class="fas fa-university"></i>
@@ -519,6 +558,80 @@
             <div class="review-grid">
                 <div class="review">
                     <div class="review-header">
+                        <div class="review-avatar">П</div>
+                        <div class="review-name">Павел Ч.</div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p>Короче инфа на 4. Ну дк? Блеск шик. Спасибо за все занятия очень сильно помог.</p>
+                    
+                    <div class="screenshot">
+                        <div>Снимок экрана от 15:25-15:26</div>
+                        <div class="screenshot-content">
+                            <div class="message incoming">
+                                <div>Короче инфа на 4</div>
+                                <div class="message-time">15:25</div>
+                            </div>
+                            <div class="message incoming">
+                                <div>Павел Чернявский-Эрн<br>Ну дк?</div>
+                                <div class="message-time">15:25</div>
+                            </div>
+                            <div class="message incoming">
+                                <div>Блеск шик</div>
+                                <div class="message-time">15:25</div>
+                            </div>
+                            <div class="message incoming">
+                                <div>Спасибо за все занятия очень сильно помог</div>
+                                <div class="message-time">15:26</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review">
+                    <div class="review-header">
+                        <div class="review-avatar">С</div>
+                        <div class="review-name">Студент</div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p>Вы лучший репетитор! Поздравляю с успехами ваших студентов!</p>
+                    
+                    <div class="screenshot">
+                        <div>Снимок экрана от 23:47</div>
+                        <div class="screenshot-content">
+                            <div class="message incoming">
+                                <div>Вы лучший репетитор 😊</div>
+                                <div class="message-time">23:47</div>
+                            </div>
+                            <div class="message outgoing">
+                                <div>Поздравляю!</div>
+                                <div class="message-time">23:47</div>
+                            </div>
+                            <div class="message incoming">
+                                <div>Вы лучший репетитор.</div>
+                                <div class="message-time">23:47</div>
+                            </div>
+                            <div class="message outgoing">
+                                <div>Ой, спасибо!</div>
+                                <div class="message-time">23:47</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review">
+                    <div class="review-header">
                         <div class="review-avatar">А</div>
                         <div class="review-name">Анна К.</div>
                         <div class="review-rating">
@@ -529,37 +642,7 @@
                             <i class="fas fa-star"></i>
                         </div>
                     </div>
-                    <p>Сдала экзамен в 2025 году, ОГЭ. Работали весь год не покладая рук и теперь я гордая обладательница пятёрки по информатике) Спасибо Вам огромное!</p>
-                </div>
-                
-                <div class="review">
-                    <div class="review-header">
-                        <div class="review-avatar">М</div>
-                        <div class="review-name">Михаил С.</div>
-                        <div class="review-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                    <p>Отличный преподаватель! Объясняет всё очень доступно и понятно. Теперь программирование - мой любимый предмет.</p>
-                </div>
-                
-                <div class="review">
-                    <div class="review-header">
-                        <div class="review-avatar">Е</div>
-                        <div class="review-name">Елена В.</div>
-                        <div class="review-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                    </div>
-                    <p>Оперативно помог в решении лабораторной работы.</p>
+                    <p>Павел Андреевич прекрасно объясняет сложные темы. Благодаря ему я смогла сдать экзамен по программировануию на отлично!</p>
                 </div>
             </div>
             
@@ -602,7 +685,7 @@
                 <a href="#"><i class="fab fa-whatsapp"></i></a>
                 <a href="#"><i class="fas fa-envelope"></i></a>
             </div>
-            <p>© 2025 Павел Андреевич - Репетитор по программированию. Все права защищены.</p>
+            <p>© 2023 Павел Андреевич - Репетитор по программированию. Все права защищены.</p>
         </footer>
     </div>
 
@@ -724,4 +807,3 @@
     </script>
 </body>
 </html>
-
