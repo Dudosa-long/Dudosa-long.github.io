@@ -110,7 +110,7 @@
             width: 300px;
             height: 300px;
             border-radius: 50%;
-            background: linear-gradient(45deg, #e74c3c, #e67e22);
+            background: linear-gradient(45deg, #1a2a6c, #3498db);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -122,10 +122,8 @@
             position: relative;
         }
         
-        .profile-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .profile-img i {
+            font-size: 120px;
         }
         
         .hero-content {
@@ -192,10 +190,12 @@
         
         .btn-telegram {
             background: #0088cc;
-            margin-top: 20px;
+            margin-top: 25px;
             display: inline-flex;
             align-items: center;
             gap: 10px;
+            font-size: 14px;
+            padding: 12px 20px;
         }
         
         .btn-telegram:hover {
@@ -280,6 +280,9 @@
             transition: all 0.3s ease;
             position: relative;
             cursor: pointer;
+            min-height: 380px;
+            display: flex;
+            flex-direction: column;
         }
         
         .service:hover {
@@ -298,23 +301,13 @@
             margin-bottom: 15px;
         }
         
+        .service p {
+            flex-grow: 1;
+            margin-bottom: 20px;
+        }
+        
         .service-contact {
-            display: none;
-            position: absolute;
-            bottom: 20px;
-            left: 0;
-            right: 0;
-            padding: 0 30px;
-        }
-        
-        .service:hover .service-contact {
-            display: block;
-            animation: fadeIn 0.5s ease;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+            margin-top: auto;
         }
         
         .reviews {
@@ -485,6 +478,10 @@
                 font-size: 60px;
             }
             
+            .profile-img i {
+                font-size: 80px;
+            }
+            
             nav ul {
                 display: none;
             }
@@ -493,10 +490,8 @@
                 font-size: 36px;
             }
             
-            .service-contact {
-                position: static;
-                margin-top: 20px;
-                display: block !important;
+            .service {
+                min-height: auto;
             }
         }
     </style>
@@ -520,8 +515,7 @@
         
         <section class="hero">
             <div class="profile-img">
-                <!-- Замените src на ссылку на ваше реальное фото -->
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Павел Андреевич">
+                <i class="fas fa-robot"></i>
             </div>
             <div class="hero-content">
                 <h1>Репетитор по программированию</h1>
@@ -575,7 +569,7 @@
             <div class="service">
                 <i class="fas fa-laptop-code"></i>
                 <h3>Основы программирования</h3>
-                <p>Изучение базовых concepts программирования на примере Python и C++</p>
+                <p>Изучение базовых concepts программирования на примере Python и C++ для начинающих</p>
                 <div class="service-contact">
                     <a href="https://t.me/CHP_now" class="btn btn-telegram" target="_blank">
                         <i class="fab fa-telegram"></i> Написать в Telegram
@@ -585,7 +579,7 @@
             <div class="service">
                 <i class="fas fa-code"></i>
                 <h3>Подготовка к экзаменам</h3>
-                <p>Интенсивная подготовка к ОГЭ</p>
+                <p>Интенсивная подготовка к ОГЭ и ЕГЭ по информатике. Разбор заданий, тестирование, пробные экзамены</p>
                 <div class="service-contact">
                     <a href="https://t.me/CHP_now" class="btn btn-telegram" target="_blank">
                         <i class="fab fa-telegram"></i> Написать в Telegram
@@ -595,7 +589,7 @@
             <div class="service">
                 <i class="fas fa-university"></i>
                 <h3>Вузовская программа</h3>
-                <p>Помощь в освоении университетской программы по программированию</p>
+                <p>Помощь в освоении университетской программы по программированию, алгоритмам и структурам данных</p>
                 <div class="service-contact">
                     <a href="https://t.me/CHP_now" class="btn btn-telegram" target="_blank">
                         <i class="fab fa-telegram"></i> Написать в Telegram
@@ -605,7 +599,7 @@
             <div class="service">
                 <i class="fas fa-trophy"></i>
                 <h3>Олимпиадная подготовка</h3>
-                <p>Подготовка к олимпиадам по программированию, включая ВСОШ</p>
+                <p>Подготовка к олимпиадам по программированию, включая ВСОШ. Решение сложных алгоритмических задач</p>
                 <div class="service-contact">
                     <a href="https://t.me/CHP_now" class="btn btn-telegram" target="_blank">
                         <i class="fab fa-telegram"></i> Написать в Telegram
@@ -688,7 +682,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="reviewText">Текст отзыва</label>
+                        <label for="reviewText">Текст отзыв</label>
                         <textarea id="reviewText" required></textarea>
                     </div>
                     <button type="submit" class="btn">Отправить отзыв</button>
