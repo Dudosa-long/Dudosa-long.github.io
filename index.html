@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Портфолио | Автоматизация процессов</title>
+    <title>Репетиторство - Павел Андреевич</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
@@ -15,7 +15,7 @@
         }
         
         body {
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            background: linear-gradient(135deg, #1a2a6c, #2c3e50, #3498db);
             color: #fff;
             min-height: 100vh;
             background-size: 400% 400%;
@@ -43,15 +43,28 @@
         }
         
         .logo {
-            font-size: 28px;
-            font-weight: 700;
             display: flex;
             align-items: center;
         }
         
-        .logo i {
-            margin-right: 10px;
-            color: #4ecdc4;
+        .logo-circle {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #e74c3c, #e67e22);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            margin-right: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
         }
         
         nav ul {
@@ -78,7 +91,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: #4ecdc4;
+            background: #e74c3c;
             transition: all 0.3s ease;
         }
         
@@ -97,7 +110,7 @@
             width: 300px;
             height: 300px;
             border-radius: 50%;
-            background: linear-gradient(45deg, #4ecdc4, #556270);
+            background: linear-gradient(45deg, #e74c3c, #e67e22);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -124,14 +137,14 @@
         }
         
         .highlight {
-            color: #4ecdc4;
+            color: #e74c3c;
             font-weight: 700;
         }
         
         .btn {
             display: inline-block;
-            background: #4ecdc4;
-            color: #333;
+            background: #e74c3c;
+            color: #fff;
             padding: 15px 30px;
             border-radius: 30px;
             text-decoration: none;
@@ -139,17 +152,25 @@
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             margin-right: 15px;
+            border: none;
+            cursor: pointer;
         }
         
         .btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3);
+            background: #c0392b;
         }
         
         .btn-outline {
             background: transparent;
-            border: 2px solid #4ecdc4;
-            color: #4ecdc4;
+            border: 2px solid #e74c3c;
+            color: #e74c3c;
+        }
+        
+        .btn-outline:hover {
+            background: #e74c3c;
+            color: #fff;
         }
         
         .section-title {
@@ -167,172 +188,188 @@
             transform: translateX(-50%);
             width: 80px;
             height: 4px;
-            background: #4ecdc4;
+            background: #e74c3c;
         }
         
-        .skills {
+        .about {
             display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
+            gap: 50px;
             margin: 40px 0;
+            align-items: center;
         }
         
-        .skill {
-            flex: 0 0 48%;
+        .about-content {
+            flex: 1;
+        }
+        
+        .about-stats {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        
+        .stat {
             background: rgba(255, 255, 255, 0.1);
             padding: 30px;
             border-radius: 15px;
-            margin-bottom: 30px;
+            text-align: center;
             backdrop-filter: blur(10px);
             transition: all 0.3s ease;
         }
         
-        .skill:hover {
+        .stat:hover {
             transform: translateY(-10px);
             background: rgba(255, 255, 255, 0.15);
         }
         
-        .skill-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
+        .stat i {
+            font-size: 40px;
+            margin-bottom: 15px;
+            color: #e74c3c;
         }
         
-        .skill-icon {
-            width: 60px;
-            height: 60px;
-            background: #4ecdc4;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 20px;
-            font-size: 24px;
+        .stat-number {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
         }
         
-        .skill-title {
-            font-size: 24px;
-        }
-        
-        .skill-bar {
-            height: 10px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 5px;
-            overflow: hidden;
-        }
-        
-        .skill-progress {
-            height: 100%;
-            background: #4ecdc4;
-            border-radius: 5px;
-        }
-        
-        .projects {
+        .services {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin: 40px 0;
         }
         
-        .project {
+        .service {
             background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
-            overflow: hidden;
-            transition: all 0.3s ease;
+            padding: 30px;
+            text-align: center;
             backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
         }
         
-        .project:hover {
+        .service:hover {
             transform: translateY(-10px);
             background: rgba(255, 255, 255, 0.15);
         }
         
-        .project-img {
-            height: 200px;
-            background: linear-gradient(45deg, #4ecdc4, #556270);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
+        .service i {
             font-size: 40px;
+            margin-bottom: 20px;
+            color: #e74c3c;
         }
         
-        .project-content {
-            padding: 20px;
-        }
-        
-        .project-title {
+        .service h3 {
             font-size: 22px;
             margin-bottom: 15px;
         }
         
-        .project-desc {
-            margin-bottom: 20px;
-            line-height: 1.6;
+        .reviews {
+            margin: 40px 0;
         }
         
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
         }
         
-        .project-tag {
-            background: rgba(78, 205, 196, 0.2);
-            color: #4ecdc4;
-            padding: 5px 10px;
-            border-radius: 20px;
-            font-size: 12px;
-            margin-right: 10px;
-            margin-bottom: 10px;
-        }
-        
-        .education {
+        .review {
             background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
-            padding: 30px;
-            margin: 40px 0;
+            padding: 20px;
             backdrop-filter: blur(10px);
         }
         
-        .edu-item {
+        .review-header {
             display: flex;
-            margin-bottom: 30px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            align-items: center;
+            margin-bottom: 15px;
         }
         
-        .edu-item:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
-            border-bottom: none;
-        }
-        
-        .edu-icon {
-            width: 60px;
-            height: 60px;
-            background: #4ecdc4;
+        .review-avatar {
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
+            background: #e74c3c;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-right: 20px;
-            font-size: 24px;
-            flex-shrink: 0;
+            font-size: 20px;
+            margin-right: 15px;
         }
         
-        .edu-details h3 {
-            font-size: 22px;
-            margin-bottom: 10px;
+        .review-name {
+            font-weight: 700;
         }
         
-        .edu-details p {
-            margin-bottom: 5px;
-            color: #ccc;
+        .review-rating {
+            color: #e67e22;
+            margin-left: auto;
         }
         
-        .edu-details .edu-year {
-            color: #4ecdc4;
+        .review-form {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
             font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            font-size: 16px;
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .rating {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .rating input {
+            display: none;
+        }
+        
+        .rating label {
+            cursor: pointer;
+            font-size: 24px;
+            color: #ddd;
+        }
+        
+        .rating input:checked ~ label {
+            color: #ddd;
+        }
+        
+        .rating label:hover,
+        .rating label:hover ~ label,
+        .rating input:checked + label,
+        .rating input:checked ~ label {
+            color: #e67e22;
         }
         
         footer {
@@ -363,7 +400,7 @@
         }
         
         .social-icons a:hover {
-            background: #4ecdc4;
+            background: #e74c3c;
             transform: translateY(-5px);
         }
         
@@ -373,14 +410,14 @@
                 text-align: center;
             }
             
+            .about {
+                flex-direction: column;
+            }
+            
             .profile-img {
                 width: 200px;
                 height: 200px;
                 font-size: 60px;
-            }
-            
-            .skill {
-                flex: 0 0 100%;
             }
             
             nav ul {
@@ -397,15 +434,14 @@
     <div class="container">
         <header>
             <div class="logo">
-                <i class="fas fa-cogs"></i>
-                <span>АВТОМАТИЗАЦИЯ</span>
+                <div class="logo-circle">ЧП</div>
+                <div class="logo-text">Павел Андреевич</div>
             </div>
             <nav>
                 <ul>
                     <li><a href="#">Главная</a></li>
-                    <li><a href="#">Навыки</a></li>
-                    <li><a href="#">Проекты</a></li>
-                    <li><a href="#">Образование</a></li>
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#">Отзывы</a></li>
                     <li><a href="#">Контакты</a></li>
                 </ul>
             </nav>
@@ -413,148 +449,149 @@
         
         <section class="hero">
             <div class="profile-img">
-                <i class="fas fa-user-graduate"></i>
+                <i class="fas fa-chalkboard-teacher"></i>
             </div>
             <div class="hero-content">
-                <h1>Студент МГТУ "СТАНКИН"</h1>
-                <p>Я студент 3-го курса направления <span class="highlight">"Автоматизация технологических процессов и систем управления"</span>. Владею языками программирования <span class="highlight">C++</span>, <span class="highlight">Python</span> и <span class="highlight">C#</span>. </p>
+                <h1>Репетитор по программированию</h1>
+                <p>Меня зовут <span class="highlight">Павел Андреевич</span>. Я студент 3-го курса МГТУ "СТАНКИН" направления "Автоматизация технологических процессов и систем управления". Уже выпустил <span class="highlight">3 потока</span> студентов, успешно освоивших программирование.</p>
                 <div class="hero-buttons">
-                    <a href="#" class="btn">Мои проекты</a>
-                    <a href="#" class="btn btn-outline">Связаться со мной</a>
+                    <a href="#" class="btn">Записаться на занятие</a>
+                    <a href="#reviews" class="btn btn-outline">Смотреть отзывы</a>
                 </div>
             </div>
         </section>
         
-        <h2 class="section-title">Мои навыки</h2>
+        <h2 class="section-title">Обо мне</h2>
         
-        <section class="skills">
-            <div class="skill">
-                <div class="skill-header">
-                    <div class="skill-icon">
-                        <i class="fab fa-cuttlefish"></i>
-                    </div>
-                    <h3 class="skill-title">C++</h3>
-                </div>
-                <p>Разработка алгоритмов, работа с микроконтроллерами, создание desktop приложений.</p>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="width: 85%"></div>
-                </div>
+        <section class="about">
+            <div class="about-content">
+                <p>Я специализируюсь на преподавании программирования для начинающих и продолжающих студентов. Моя цель — не просто научить syntax языка, а помочь понять логику программирования и развить алгоритмическое мышление.</p>
+                <p>Имею опыт работы с разными возрастными группами и индивидуальный подход к каждому ученику. Мои студенты успешно сдают экзамены и поступают в технические вузы.</p>
+                <p>Владею языками программирования: <span class="highlight">C++</span>, <span class="highlight">Python</span>, <span class="highlight">C#</span>, а также основами веб-разработки.</p>
             </div>
-            
-            <div class="skill">
-                <div class="skill-header">
-                    <div class="skill-icon">
-                        <i class="fab fa-python"></i>
-                    </div>
-                    <h3 class="skill-title">Python</h3>
+            <div class="about-stats">
+                <div class="stat">
+                    <i class="fas fa-user-graduate"></i>
+                    <div class="stat-number">3+</div>
+                    <div>года преподавания</div>
                 </div>
-                <p>Data analysis, машинное обучение, автоматизация задач, разработка скриптов.</p>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="width: 75%"></div>
+                <div class="stat">
+                    <i class="fas fa-users"></i>
+                    <div class="stat-number">3</div>
+                    <div>выпущенных потока</div>
                 </div>
-            </div>
-            
-            <div class="skill">
-                <div class="skill-header">
-                    <div class="skill-icon">
-                        <i class="fab fa-windows"></i>
-                    </div>
-                    <h3 class="skill-title">C#</h3>
+                <div class="stat">
+                    <i class="fas fa-book"></i>
+                    <div class="stat-number">50+</div>
+                    <div>студентов</div>
                 </div>
-                <p>Разработка Windows приложений, работа с .NET Framework, создание игр на Unity.</p>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="width: 70%"></div>
-                </div>
-            </div>
-            
-            <div class="skill">
-                <div class="skill-header">
-                    <div class="skill-icon">
-                        <i class="fas fa-project-diagram"></i>
-                    </div>
-                    <h3 class="skill-title">Автоматизация</h3>
-                </div>
-                <p>Проектирование систем автоматизации, разработка алгоритмов управления, моделирование процессов.</p>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="width: 80%"></div>
+                <div class="stat">
+                    <i class="fas fa-star"></i>
+                    <div class="stat-number">4.9</div>
+                    <div>средний рейтинг</div>
                 </div>
             </div>
         </section>
         
-        <h2 class="section-title">Мои проекты</h2>
+        <h2 class="section-title">Мои услуги</h2>
         
-        <section class="projects">
-            <div class="project">
-                <div class="project-img">
-                    <i class="fas fa-industry"></i>
-                </div>
-                <div class="project-content">
-                    <h3 class="project-title">Система управления конвейером</h3>
-                    <p class="project-desc">Разработал систему управления промышленным конвейером на основе микроконтроллера Arduino.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">C++</span>
-                        <span class="project-tag">Arduino</span>
-                        <span class="project-tag">Автоматизация</span>
-                    </div>
-                </div>
+        <section class="services">
+            <div class="service">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Основы программирования</h3>
+                <p>Изучение базовых concepts программирования на примере Python и C++</p>
             </div>
-            
-            <div class="project">
-                <div class="project-img">
-                    <i class="fas fa-robot"></i>
-                </div>
-                <div class="project-content">
-                    <h3 class="project-title">Моделирование робота-манипулятора</h3>
-                    <p class="project-desc">Создал программу для моделирования и управления движением промышленного робота-манипулятора.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">Python</span>
-                        <span class="project-tag">Matplotlib</span>
-                        <span class="project-tag">Кинематика</span>
-                    </div>
-                </div>
+            <div class="service">
+                <i class="fas fa-code"></i>
+                <h3>Подготовка к экзаменам</h3>
+                <p>Интенсивная подготовка к ЕГЭ, ОГЭ и вступительным экзаменам</p>
             </div>
-            
-            <div class="project">
-                <div class="project-img">
-                    <i class="fas fa-chart-line"></i>
-                </div>
-                <div class="project-content">
-                    <h3 class="project-title">Анализ производственных данных</h3>
-                    <p class="project-desc">Разработал систему сбора и анализа данных с датчиков производственной линии.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">Python</span>
-                        <span class="project-tag">Pandas</span>
-                        <span class="project-tag">Data Analysis</span>
-                    </div>
-                </div>
+            <div class="service">
+                <i class="fas fa-university"></i>
+                <h3>Вузовская программа</h3>
+                <p>Помощь в освоении университетской программы по программированию</p>
             </div>
         </section>
         
-        <h2 class="section-title">Образование</h2>
+        <h2 class="section-title" id="reviews">Отзывы студентов</h2>
         
-        <section class="education">
-            <div class="edu-item">
-                <div class="edu-icon">
-                    <i class="fas fa-university"></i>
+        <section class="reviews">
+            <div class="review-grid">
+                <div class="review">
+                    <div class="review-header">
+                        <div class="review-avatar">А</div>
+                        <div class="review-name">Анна К.</div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p>Павел Андреевич прекрасно объясняет сложные темы. Благодаря ему я смогла сдать экзамен по программировануию на отлично!</p>
                 </div>
-                <div class="edu-details">
-                    <h3>МГТУ "СТАНКИН"</h3>
-                    <p>Направление: Автоматизация технологических процессов и систем управления</p>
-                    <p>Студент 3-го курса</p>
-                    <p class="edu-year">2025 - настоящее время</p>
+                
+                <div class="review">
+                    <div class="review-header">
+                        <div class="review-avatar">М</div>
+                        <div class="review-name">Михаил С.</div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p>Отличный преподаватель! Объясняет всё очень доступно и понятно. Теперь программирование - мой любимый предмет.</p>
+                </div>
+                
+                <div class="review">
+                    <div class="review-header">
+                        <div class="review-avatar">Е</div>
+                        <div class="review-name">Елена В.</div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p>Занимаюсь с Павлом Андреевичем уже полгода. За это время я не только подтянула университетскую программу, но и начала делать собственные проекты.</p>
                 </div>
             </div>
             
-            <div class="edu-item">
-                <div class="edu-icon">
-                    <i class="fas fa-certificate"></i>
-                </div>
-                <div class="edu-details">
-                    <h3>Курсы и сертификаты</h3>
-                    <p>Сертификат "Программирование на C++ для начинающих"</p>
-                    <p>Курс "Основы автоматизации производственных процессов"</p>
-                    <p class="edu-year">2021 - 2026</p>
-                </div>
+            <h3 class="section-title">Оставить отзыв</h3>
+            
+            <div class="review-form">
+                <form id="addReviewForm">
+                    <div class="form-group">
+                        <label for="name">Ваше имя</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="rating">Оценка</label>
+                        <div class="rating">
+                            <input type="radio" id="star5" name="rating" value="5">
+                            <label for="star5"><i class="fas fa-star"></i></label>
+                            <input type="radio" id="star4" name="rating" value="4">
+                            <label for="star4"><i class="fas fa-star"></i></label>
+                            <input type="radio" id="star3" name="rating" value="3">
+                            <label for="star3"><i class="fas fa-star"></i></label>
+                            <input type="radio" id="star2" name="rating" value="2">
+                            <label for="star2"><i class="fas fa-star"></i></label>
+                            <input type="radio" id="star1" name="rating" value="1">
+                            <label for="star1"><i class="fas fa-star"></i></label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="reviewText">Текст отзыва</label>
+                        <textarea id="reviewText" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Отправить отзыв</button>
+                </form>
             </div>
         </section>
         
@@ -562,19 +599,68 @@
             <div class="social-icons">
                 <a href="#"><i class="fab fa-vk"></i></a>
                 <a href="#"><i class="fab fa-telegram"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
             </div>
-            <p>© 2025 Портфолио студента МГТУ "СТАНКИН". Все права защищены.</p>
+            <p>© 2023 Павел Андреевич - Репетитор по программированию. Все права защищены.</p>
         </footer>
     </div>
 
     <script>
-        // Анимация для появления элементов при прокрутке
+        // Функционал для добавления отзывов
         document.addEventListener('DOMContentLoaded', function() {
-            const skills = document.querySelectorAll('.skill');
-            const projects = document.querySelectorAll('.project');
-            const eduItems = document.querySelectorAll('.edu-item');
+            const reviewForm = document.getElementById('addReviewForm');
+            
+            reviewForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const name = document.getElementById('name').value;
+                const rating = document.querySelector('input[name="rating"]:checked');
+                const text = document.getElementById('reviewText').value;
+                
+                if (!name || !rating || !text) {
+                    alert('Пожалуйста, заполните все поля формы');
+                    return;
+                }
+                
+                // Создаем новый отзыв
+                const reviewGrid = document.querySelector('.review-grid');
+                const newReview = document.createElement('div');
+                newReview.className = 'review';
+                
+                const ratingValue = parseInt(rating.value);
+                let ratingStars = '';
+                for (let i = 0; i < 5; i++) {
+                    if (i < ratingValue) {
+                        ratingStars += '<i class="fas fa-star"></i>';
+                    } else {
+                        ratingStars += '<i class="far fa-star"></i>';
+                    }
+                }
+                
+                newReview.innerHTML = `
+                    <div class="review-header">
+                        <div class="review-avatar">${name.charAt(0)}</div>
+                        <div class="review-name">${name}</div>
+                        <div class="review-rating">${ratingStars}</div>
+                    </div>
+                    <p>${text}</p>
+                `;
+                
+                // Добавляем новый отзыв в начало списка
+                reviewGrid.insertBefore(newReview, reviewGrid.firstChild);
+                
+                // Очищаем форму
+                reviewForm.reset();
+                
+                // Показываем сообщение об успехе
+                alert('Спасибо за ваш отзыв! Он был добавлен на сайт.');
+            });
+            
+            // Анимация для появления элементов при прокрутке
+            const stats = document.querySelectorAll('.stat');
+            const services = document.querySelectorAll('.service');
+            const reviews = document.querySelectorAll('.review');
             
             // Функция для проверки, находится ли элемент в viewport
             function isInViewport(element) {
@@ -589,45 +675,45 @@
             
             // Функция для добавления класса анимации
             function checkScroll() {
-                skills.forEach(skill => {
-                    if (isInViewport(skill)) {
-                        skill.style.opacity = 1;
-                        skill.style.transform = 'translateY(0)';
+                stats.forEach(stat => {
+                    if (isInViewport(stat)) {
+                        stat.style.opacity = 1;
+                        stat.style.transform = 'translateY(0)';
                     }
                 });
                 
-                projects.forEach(project => {
-                    if (isInViewport(project)) {
-                        project.style.opacity = 1;
-                        project.style.transform = 'translateY(0)';
+                services.forEach(service => {
+                    if (isInViewport(service)) {
+                        service.style.opacity = 1;
+                        service.style.transform = 'translateY(0)';
                     }
                 });
                 
-                eduItems.forEach(item => {
-                    if (isInViewport(item)) {
-                        item.style.opacity = 1;
-                        item.style.transform = 'translateX(0)';
+                reviews.forEach(review => {
+                    if (isInViewport(review)) {
+                        review.style.opacity = 1;
+                        review.style.transform = 'translateY(0)';
                     }
                 });
             }
             
             // Инициализация стилей для анимации
-            skills.forEach(skill => {
-                skill.style.opacity = 0;
-                skill.style.transform = 'translateY(50px)';
-                skill.style.transition = 'all 0.8s ease';
+            stats.forEach(stat => {
+                stat.style.opacity = 0;
+                stat.style.transform = 'translateY(50px)';
+                stat.style.transition = 'all 0.8s ease';
             });
             
-            projects.forEach(project => {
-                project.style.opacity = 0;
-                project.style.transform = 'translateY(50px)';
-                project.style.transition = 'all 0.8s ease';
+            services.forEach(service => {
+                service.style.opacity = 0;
+                service.style.transform = 'translateY(50px)';
+                service.style.transition = 'all 0.8s ease';
             });
             
-            eduItems.forEach(item => {
-                item.style.opacity = 0;
-                item.style.transform = 'translateX(-50px)';
-                item.style.transition = 'all 0.8s ease';
+            reviews.forEach(review => {
+                review.style.opacity = 0;
+                review.style.transform = 'translateY(50px)';
+                review.style.transition = 'all 0.8s ease';
             });
             
             // Проверка при загрузке и прокрутке
@@ -638,5 +724,3 @@
     </script>
 </body>
 </html>
-
-
