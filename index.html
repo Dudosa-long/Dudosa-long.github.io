@@ -152,7 +152,7 @@
             padding: 10px 15px;
             border-radius: 20px;
             display: inline-block;
-            margin-top: 10px;
+            margin-bottom: 20px;
             font-size: 16px;
         }
         
@@ -283,6 +283,7 @@
             min-height: 380px;
             display: flex;
             flex-direction: column;
+            overflow: hidden;
         }
         
         .service:hover {
@@ -308,6 +309,16 @@
         
         .service-contact {
             margin-top: auto;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            height: 0;
+        }
+        
+        .service:hover .service-contact {
+            opacity: 1;
+            transform: translateY(0);
+            height: auto;
         }
         
         .reviews {
@@ -493,6 +504,12 @@
             .service {
                 min-height: auto;
             }
+            
+            .service-contact {
+                opacity: 1;
+                transform: translateY(0);
+                height: auto;
+            }
         }
     </style>
 </head>
@@ -519,10 +536,10 @@
             </div>
             <div class="hero-content">
                 <h1>Репетитор по программированию</h1>
-                <p>Меня зовут <span class="highlight">Павел Андреевич</span>. Я студент 3-го курса МГТУ "СТАНКИН" направления "Автоматизация технологических процессов и систем управления". Уже выпустил <span class="highlight">3 потока</span> студентов, успешно освоивших программирование.</p>
                 <div class="achievement">
                     <i class="fas fa-trophy"></i> Призёр ВСОШ по программированию 2022 года
                 </div>
+                <p>Меня зовут <span class="highlight">Павел Андреевич</span>. Я студент 3-го курса МГТУ "СТАНКИН" направления "Автоматизация технологических процессов и систем управления". Уже выпустил <span class="highlight">3 потока</span> студентов, успешно освоивших программирование.</p>
                 <div class="hero-buttons">
                     <a href="#contacts" class="btn">Записаться на занятие</a>
                     <a href="#reviews" class="btn btn-outline">Смотреть отзывы</a>
