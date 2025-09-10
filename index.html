@@ -118,6 +118,14 @@
             color: white;
             flex-shrink: 0;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         
         .hero-content {
@@ -139,6 +147,15 @@
         .highlight {
             color: #e74c3c;
             font-weight: 700;
+        }
+        
+        .achievement {
+            background: rgba(231, 76, 60, 0.2);
+            padding: 10px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 16px;
         }
         
         .btn {
@@ -171,6 +188,18 @@
         .btn-outline:hover {
             background: #e74c3c;
             color: #fff;
+        }
+        
+        .btn-telegram {
+            background: #0088cc;
+            margin-top: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .btn-telegram:hover {
+            background: #006da3;
         }
         
         .section-title {
@@ -249,6 +278,8 @@
             text-align: center;
             backdrop-filter: blur(10px);
             transition: all 0.3s ease;
+            position: relative;
+            cursor: pointer;
         }
         
         .service:hover {
@@ -265,6 +296,25 @@
         .service h3 {
             font-size: 22px;
             margin-bottom: 15px;
+        }
+        
+        .service-contact {
+            display: none;
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            padding: 0 30px;
+        }
+        
+        .service:hover .service-contact {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         
         .reviews {
@@ -442,6 +492,12 @@
             .hero h1 {
                 font-size: 36px;
             }
+            
+            .service-contact {
+                position: static;
+                margin-top: 20px;
+                display: block !important;
+            }
         }
     </style>
 </head>
@@ -455,7 +511,7 @@
             <nav>
                 <ul>
                     <li><a href="#">Главная</a></li>
-                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#services">Услуги</a></li>
                     <li><a href="#reviews">Отзывы</a></li>
                     <li><a href="#contacts">Контакты</a></li>
                 </ul>
@@ -464,11 +520,15 @@
         
         <section class="hero">
             <div class="profile-img">
-                <i class="fas fa-chalkboard-teacher"></i>
+                <!-- Замените src на ссылку на ваше реальное фото -->
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Павел Андреевич">
             </div>
             <div class="hero-content">
                 <h1>Репетитор по программированию</h1>
                 <p>Меня зовут <span class="highlight">Павел Андреевич</span>. Я студент 3-го курса МГТУ "СТАНКИН" направления "Автоматизация технологических процессов и систем управления". Уже выпустил <span class="highlight">3 потока</span> студентов, успешно освоивших программирование.</p>
+                <div class="achievement">
+                    <i class="fas fa-trophy"></i> Призёр ВСОШ по программированию 2022 года
+                </div>
                 <div class="hero-buttons">
                     <a href="#contacts" class="btn">Записаться на занятие</a>
                     <a href="#reviews" class="btn btn-outline">Смотреть отзывы</a>
@@ -481,6 +541,7 @@
         <section class="about">
             <div class="about-content">
                 <p>Я специализируюсь на преподавании программирования для учеников школ, лицеев для повышения успеваемости или для сдачи экзаменов. Моя цель — не просто научить syntax языка, а помочь понять логику программирования и развить алгоритмическое мышление.</p>
+                <p>Как призёр ВСОШ по программированию 2022 года, я знаю все тонкости олимпиадных задач и могу подготовить к участию в олимпиадах.</p>
                 <p>Имею опыт работы с разными возрастными группами и индивидуальный подход к каждому ученику. Мои ребята успешно сдают экзамены и поступают в технические вузы.</p>
                 <p>Владею языками программирования: <span class="highlight">C++</span>, <span class="highlight">Python</span>, <span class="highlight">C#</span>, а также основами веб-разработки.</p>
             </div>
@@ -508,23 +569,48 @@
             </div>
         </section>
         
-        <h2 class="section-title">Мои услуги</h2>
+        <h2 class="section-title" id="services">Мои услуги</h2>
         
         <section class="services">
             <div class="service">
                 <i class="fas fa-laptop-code"></i>
                 <h3>Основы программирования</h3>
                 <p>Изучение базовых concepts программирования на примере Python и C++</p>
+                <div class="service-contact">
+                    <a href="https://t.me/CHP_now" class="btn btn-telegram" target="_blank">
+                        <i class="fab fa-telegram"></i> Написать в Telegram
+                    </a>
+                </div>
             </div>
             <div class="service">
                 <i class="fas fa-code"></i>
                 <h3>Подготовка к экзаменам</h3>
                 <p>Интенсивная подготовка к ОГЭ</p>
+                <div class="service-contact">
+                    <a href="https://t.me/CHP_now" class="btn btn-telegram" target="_blank">
+                        <i class="fab fa-telegram"></i> Написать в Telegram
+                    </a>
+                </div>
             </div>
             <div class="service">
                 <i class="fas fa-university"></i>
                 <h3>Вузовская программа</h3>
                 <p>Помощь в освоении университетской программы по программированию</p>
+                <div class="service-contact">
+                    <a href="https://t.me/CHP_now" class="btn btn-telegram" target="_blank">
+                        <i class="fab fa-telegram"></i> Написать в Telegram
+                    </a>
+                </div>
+            </div>
+            <div class="service">
+                <i class="fas fa-trophy"></i>
+                <h3>Олимпиадная подготовка</h3>
+                <p>Подготовка к олимпиадам по программированию, включая ВСОШ</p>
+                <div class="service-contact">
+                    <a href="https://t.me/CHP_now" class="btn btn-telegram" target="_blank">
+                        <i class="fab fa-telegram"></i> Написать в Telegram
+                    </a>
+                </div>
             </div>
         </section>
         
@@ -739,6 +825,23 @@
             window.addEventListener('load', checkScroll);
             window.addEventListener('scroll', checkScroll);
             checkScroll(); // Первоначальная проверка
+            
+            // Плавная прокрутка для якорных ссылок
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
         });
     </script>
 </body>
