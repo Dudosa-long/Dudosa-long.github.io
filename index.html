@@ -202,6 +202,26 @@
             background: #006da3;
         }
         
+        .btn-whatsapp {
+            background: #25D366;
+            margin-top: 25px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            padding: 12px 20px;
+        }
+        
+        .btn-whatsapp:hover {
+            background: #128C7E;
+        }
+        
+        .contact-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
         .section-title {
             text-align: center;
             font-size: 36px;
@@ -319,6 +339,13 @@
             opacity: 1;
             transform: translateY(0);
             height: auto;
+        }
+        
+        .service-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
         }
         
         .reviews {
@@ -510,6 +537,15 @@
                 transform: translateY(0);
                 height: auto;
             }
+            
+            .contact-buttons {
+                justify-content: center;
+            }
+            
+            .service-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
@@ -543,6 +579,14 @@
                 <div class="hero-buttons">
                     <a href="#contacts" class="btn">Записаться на занятие</a>
                     <a href="#reviews" class="btn btn-outline">Смотреть отзывы</a>
+                </div>
+                <div class="contact-buttons">
+                    <a href="https://t.me/CHP_now" class="btn btn-telegram" target="_blank">
+                        <i class="fab fa-telegram"></i> Написать в Telegram
+                    </a>
+                    <a href="https://wa.me/79161099866" class="btn btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Написать в WhatsApp
+                    </a>
                 </div>
             </div>
         </section>
@@ -588,9 +632,14 @@
                 <h3>Основы программирования</h3>
                 <p>Изучение базовых concepts программирования на примере Python и C++ для начинающих</p>
                 <div class="service-contact">
-                    <a href="https://t.me/CHP_now" class="btn btn-telegram" target="_blank">
-                        <i class="fab fa-telegram"></i> Написать в Telegram
-                    </a>
+                    <div class="service-buttons">
+                        <a href="https://t.me/CHP_now" class="btn btn-telegram" target="_blank">
+                            <i class="fab fa-telegram"></i> Telegram
+                        </a>
+                        <a href="https://wa.me/79161099866" class="btn btn-whatsapp" target="_blank">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="service">
@@ -598,9 +647,14 @@
                 <h3>Подготовка к экзаменам</h3>
                 <p>Интенсивная подготовка к ОГЭ и ЕГЭ по информатике. Разбор заданий, тестирование, пробные экзамены</p>
                 <div class="service-contact">
-                    <a href="https://t.me/CHP_now" class="btn btn-telegram" target="_blank">
-                        <i class="fab fa-telegram"></i> Написать в Telegram
-                    </a>
+                    <div class="service-buttons">
+                        <a href="https://t.me/CHP_now" class="btn btn-telegram" target="_blank">
+                            <i class="fab fa-telegram"></i> Telegram
+                        </a>
+                        <a href="https://wa.me/79161099866" class="btn btn-whatsapp" target="_blank">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="service">
@@ -608,9 +662,14 @@
                 <h3>Вузовская программа</h3>
                 <p>Помощь в освоении университетской программы по программированию, алгоритмам и структурам данных</p>
                 <div class="service-contact">
-                    <a href="https://t.me/CHP_now" class="btn btn-telegram" target="_blank">
-                        <i class="fab fa-telegram"></i> Написать в Telegram
-                    </a>
+                    <div class="service-buttons">
+                        <a href="https://t.me/CHP_now" class="btn btn-telegram" target="_blank">
+                            <i class="fab fa-telegram"></i> Telegram
+                        </a>
+                        <a href="https://wa.me/79161099866" class="btn btn-whatsapp" target="_blank">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="service">
@@ -618,9 +677,14 @@
                 <h3>Олимпиадная подготовка</h3>
                 <p>Подготовка к олимпиадам по программированию, включая ВСОШ. Решение сложных алгоритмических задач</p>
                 <div class="service-contact">
-                    <a href="https://t.me/CHP_now" class="btn btn-telegram" target="_blank">
-                        <i class="fab fa-telegram"></i> Написать в Telegram
-                    </a>
+                    <div class="service-buttons">
+                        <a href="https://t.me/CHP_now" class="btn btn-telegram" target="_blank">
+                            <i class="fab fa-telegram"></i> Telegram
+                        </a>
+                        <a href="https://wa.me/79161099866" class="btn btn-whatsapp" target="_blank">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -710,12 +774,13 @@
         <footer id="contacts">
             <div class="social-icons">
                 <a href="https://t.me/CHP_now" target="_blank"><i class="fab fa-telegram"></i></a>
+                <a href="https://wa.me/79161099866" target="_blank"><i class="fab fa-whatsapp"></i></a>
                 <a href="https://www.avito.ru/user/7d537554dd605bfc8c287253151dd3c9/profile" target="_blank"><i class="fas fa-store"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
-                <a href="#"><i class="fas fa-envelope"></i></a>
+                <a href="mailto:pavel@example.com"><i class="fas fa-envelope"></i></a>
             </div>
             <div class="contact-info">
                 <p>Свяжитесь со мной через Telegram: <a href="https://t.me/CHP_now" target="_blank">@CHP_now</a></p>
+                <p>Свяжитесь со мной через WhatsApp: <a href="https://wa.me/79161099866" target="_blank">+7 (916) 109-98-66</a></p>
                 <p>Мой профиль на Авито: <a href="https://www.avito.ru/user/7d537554dd605bfc8c287253151dd3c9/profile" target="_blank">avito.ru/profile</a></p>
             </div>
             <p>© 2025 Павел Андреевич - Репетитор по программированию. Все права защищены.</p>
